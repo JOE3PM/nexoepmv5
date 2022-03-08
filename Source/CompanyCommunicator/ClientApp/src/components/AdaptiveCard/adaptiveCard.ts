@@ -7,33 +7,38 @@ export const getInitAdaptiveCard = (t: TFunction) => {
     const titleTextAsString = t("TitleText");
     return (
         {
-            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
             "type": "AdaptiveCard",
-            "version": "1.0",
             "body": [
                 {
                     "type": "TextBlock",
-                    "text": "This is some **bold** text"
+                    "weight": "Bolder",
+                    "text": titleTextAsString,
+                    "size": "ExtraLarge",
+                    "wrap": true
+                },
+                {
+                    "type": "Image",
+                    "spacing": "Default",
+                    "url": "",
+                    "size": "Stretch",
+                    "width": "400px",
+                    "altText": ""
                 },
                 {
                     "type": "TextBlock",
-                    "text": "This is some _italic_ text"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "- Bullet \r- List \r",
+                    "text": "",
                     "wrap": true
                 },
                 {
                     "type": "TextBlock",
-                    "text": "1. Numbered\r2. List\r",
-                    "wrap": true
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Check out [Adaptive Cards](https://adaptivecards.io)"
+                    "wrap": true,
+                    "size": "Small",
+                    "weight": "Lighter",
+                    "text": ""
                 }
-            ]
+            ],
+            "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.0"
         }      
     );
 }
