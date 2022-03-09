@@ -38,7 +38,7 @@ export const getInitAdaptiveCard = (t: TFunction) => {
                 }
             ],
             "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-            "version": "1.3"
+            "version": "1.0"
         }
     );
 }
